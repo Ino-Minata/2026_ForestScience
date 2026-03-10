@@ -1,284 +1,337 @@
 <!DOCTYPE html>
-
 <html lang="ja">
 
-<head>
+ <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
- <!-- 検索エンジン対策 -->
+<!-- 検索エンジン対策 -->
  <meta name="robots" content="noindex, nofollow, noarchive, noai, noimageai">
 
- <!-- リファラ制御 -->
+<!-- リファラ制御 -->
  <meta name="referrer" content="no-referrer">
 
-
  <title>無脊椎動物による子実体の利用</title>
-	
+
  <style>
-   body {
-      font-family: "MS Gothic", "MS ゴシック", sans-serif;
-      line-height: 1.7;
-      margin: 0;
-      padding: 0;
-      background-color: #C0C0C0;
-      color: #000000;
-      border: 3px solid #ffffff;
-    }
 
-    header {
-      background-color: #000080;
-      color: white;
-      padding: 6px 0;
-      text-align: center;
-      border-bottom: 2px solid #000000;
-    }
+body {
+  font-family: "MS Gothic", "MS ゴシック", sans-serif;
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+  background-color: #C0C0C0;
+  color: #000000;
+  border: 3px solid #ffffff;
+}
 
-    h1 {
-      font-size: 24px;
-      margin: 0;
-      padding: 10px;
-    }
+header {
+  background-color: #000080;
+  color: white;
+  padding: 6px 0;
+  text-align: center;
+  border-bottom: 2px solid #000000;
+}
 
-    h2 {
-      font-size: 20px;
-      margin: 10px 0 10px 0;
-      color: #000000;
-      border-bottom: 2px solid #808080;
-      padding-bottom: 3px;
-    }
+h1 {
+  font-size: 24px;
+  margin: 0;
+  padding: 10px;
+}
 
-    .container {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 0 20px;
-      padding-bottom: 5px;
-      background-color: white;
-      border: 2px solid #000000;
-          }
+h2 {
+  font-size: 20px;
+  margin: 10px 0 10px 0;
+  color: #000000;
+  border-bottom: 2px solid #808080;
+  padding-bottom: 3px;
+}
 
-    .table-wrapper {
-      overflow-x: auto;
-      margin-bottom: 20px;
-    }
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 20px;
+  padding-bottom: 5px;
+  background-color: white;
+  border: 2px solid #000000;
+}
 
-    table {
-      width: 100%;
-      border-spacing: 0;
-      border-collapse: separate;
-	　background-color: white;
-    }
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
 
-    th, td {
-      border: 1px solid #848284;
-      text-align: left;
-      vertical-align: top;
-      padding: 8px;
-      white-space: nowrap; 
-    }
+table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: separate;
+  background-color: white;
+}
 
-    th {
-      background-color: #C6C3C6;
-      font-size: 14px;
-      text-align: center;
-      color: #000000;
-    }
+th, td {
+  border: 1px solid #848284;
+  text-align: left;
+  vertical-align: top;
+  padding: 8px;
+  white-space: nowrap;
+}
 
-    th:first-child,
-    td:first-child {
-     width: 20%;
-     position: sticky;
-     left: 0;
-     background-color: #C6C3C6;
-     z-index: 2;
-    }
+th {
+  background-color: #C6C3C6;
+  font-size: 14px;
+  text-align: center;
+  color: #000000;
+}
 
-    td:first-child {
-      background-color: #C6C3C6;
-      font-weight: bold;
-    }
+/* 固定列 */
 
-    th:nth-child(3) {
-     text-align: left;
-     padding-left: 2em;
-    }
+th:first-child,
+td:first-child {
+  width: 20%;
+  position: sticky;
+  left: 0;
+  background-color: #C6C3C6;
+}
 
-    td:nth-child(2) {
-     padding-left: 1em;
-    }
+th:first-child {
+  z-index: 3;
+}
 
-    td a {
-      color: #396DA5;
-      text-decoration: none;
-      margin-right: 1.5em;
-      font-weight: bold;
-    }
+td:first-child {
+  font-weight: bold;
+  z-index: 2;
+}
 
-    td a:last-child {
-      margin-right: 0;
-    }
+/* 備考ヘッダー */
 
-    td a:hover {
-      text-decoration: underline;
-    }
+th:nth-child(3) {
+  text-align: left;
+  padding-left: 2em;
+}
 
-    @media screen and (max-width: 1024px) {
-      h1 {
-        font-size: 22px;
-      }
-      th, td {
-        font-size: 16px;
-      }
-    }
+/* リンク列 */
 
-    @media screen and (max-width: 768px) {
-      h1 {
-        font-size: 20px;
-      }
-      th, td {
-        font-size: 16px;
-      }
-    }
+td:nth-child(2) {
+  padding-left: 1em;
+}
 
-    @media screen and (max-width: 480px) {
-      h1 {
-        font-size: 18px;
-      }
-      h2 {
-        font-size: 18px;
-      }
-      th, td {
-        font-size: 14px;
-      }
-      th:nth-child(2) {
-        text-align: left;
-        padding-left: 3em;
-      } 
-    }
-    @media screen and (min-width: 769px) {
-      .sp {
-        display: none;
-      }
-    }
-  </style>
+td a {
+  color: #396DA5;
+  text-decoration: none;
+  margin-right: 1.5em;
+  font-weight: bold;
+}
+
+td a:last-child {
+  margin-right: 0;
+}
+
+td a:hover {
+  text-decoration: underline;
+}
+
+/* レスポンシブ */
+
+@media screen and (max-width: 1024px) {
+
+  h1 {
+    font-size: 22px;
+  }
+
+  th, td {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  h1 {
+    font-size: 20px;
+  }
+
+  th, td {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  h1 {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  th, td {
+    font-size: 14px;
+  }
+
+  th:nth-child(2) {
+    text-align: left;
+    padding-left: 3em;
+  }
+
+}
+
+@media screen and (min-width: 769px) {
+
+  .sp {
+    display: none;
+  }
+
+}
+
+</style>
 </head>
+
 <body>
- <header>
-  <h1>無脊椎動物による<br class="sp"/>子実体の利用</h1>
- </header>
 
- <div class="container">
-  <p>2026年に調査地で撮影された、子実体を利用する無脊椎動物の動画です。<br>センサーカメラのタイムラプス機能を用いて撮影された写真を編集し、動画にしました。<br>時間の経過をわかりやすくするために、研究では用いられていない写真も動画中に含まれます。<br>動画内の1時間は、現実の1秒に相当します。</p>
+<header>
+<h1>無脊椎動物による<br class="sp">子実体の利用</h1>
+</header>
 
-  <h2>テングタケ科</h2>
-  <div class="table-wrapper">
-   <table>
+<div class="container">
 
-    <thead>
-    <tr>
-     <th>動画ID</th>
-     <th>動画リンク (YouTube)</th>
-     <th>備考 "分類群 (m:ss)"</th>
-    </tr>
-    </thead>
+<p>
+2026年に調査地で撮影された、子実体を利用する無脊椎動物の動画です。<br>
+センサーカメラのタイムラプス機能を用いて撮影された写真を編集し、動画にしました。<br>
+時間の経過をわかりやすくするために、研究では用いられていない写真も動画中に含まれます。<br>
+動画内の1時間は、現実の1秒に相当します。
+</p>
 
-    <tbody>
-    <tr>
-     <td>20250923_02_Ama</td>
-     <td><a href="">ショート</a>
-     <a href="https://youtu.be/q6bPpxJWLEM" target="_blank" rel="noopener noreferrer">動画</a></td>
-     <td>トビムシ (0:04)</td>
-    </tr>
+<h2>テングタケ科</h2>
 
-    <tr>
-     <td>20251006_03_Ama</td>
-     <td><a href="">ショート</a>
-     <a href="https://youtu.be/UitfDYSYbxw" target="_blank" rel="noopener noreferrer">動画</a></td>
-     <td>ゴキブリ (夜間), カマドウマ (1:40他), ナメクジ (0:59, 1:21), ゴミムシ (1:25他), サシガメ (1:45)</td>
-    </tr>
+<div class="table-wrapper">
+<table>
 
-    <tr>
-     <td>20251006_07_Ama</td>
-     <td><a href="">ショート</a>
-     <a href="https://youtu.be/A-tmYNwDHXI" target="_blank" rel="noopener noreferrer">動画</a></td>
-     <td>カマドウマ (0:02, 0:12), ケカビ (0:30), ゴミムシ (0:36)</td>
-    </tr>
+<thead>
+<tr>
+<th>動画ID</th>
+<th>動画リンク (YouTube)</th>
+<th>備考 "分類群 (m:ss)"</th>
+</tr>
+</thead>
 
-    <tr>
-     <td>20251022_05_Ama</td>
-     <td><a href="">ショート</a>
-     <a href="https://youtu.be/sNdpjHMIj70" target="_blank" rel="noopener noreferrer">動画</a></td>
-     <td>ナメクジ (0:56, 1:23, 1:27, 1:40)</td>
-    </tr>
-    </tbody>
-   </table>
-  </div>
+<tbody>
 
+<tr>
+<td>20250923_02_Ama</td>
+<td>
+<a href="#" onclick="return false;">ショート</a>
+<a href="https://youtu.be/q6bPpxJWLEM" target="_blank" rel="noopener noreferrer">動画</a>
+</td>
+<td>トビムシ (0:04)</td>
+</tr>
 
-  <h2>イグチ目</h2>
-  <div class="table-wrapper">
-   <table>
+<tr>
+<td>20251006_03_Ama</td>
+<td>
+<a href="#" onclick="return false;">ショート</a>
+<a href="https://youtu.be/UitfDYSYbxw" target="_blank" rel="noopener noreferrer">動画</a>
+</td>
+<td>ゴキブリ (夜間), カマドウマ (1:40他), ナメクジ (0:59, 1:21), ゴミムシ (1:25他), サシガメ (1:45)</td>
+</tr>
 
-    <thead>
-    <tr>
-     <th>動画ID</th>
-     <th>動画リンク (YouTube)</th>
-     <th>備考 "分類群 (m:ss)"</th>
-    </tr>
-    </thead>
+<tr>
+<td>20251006_07_Ama</td>
+<td>
+<a href="#" onclick="return false;">ショート</a>
+<a href="https://youtu.be/A-tmYNwDHXI" target="_blank" rel="noopener noreferrer">動画</a>
+</td>
+<td>カマドウマ (0:02, 0:12), ケカビ (0:30), ゴミムシ (0:36)</td>
+</tr>
 
-    <tbody>
-    <tr>
-     <td>20250916_08_Bol</td>
-     <td><a href="">ショート</a>
-     <a href="https://youtu.be/7XfmHJOZ2E4" target="_blank" rel="noopener noreferrer">動画</a></td>
-     <td>カタツムリ (0:16), バッタ目 (0:36), センチコガネ類 (1:19, 1.53), ゴミムシ類(1:26)</td>
-    </tr>
+<tr>
+<td>20251022_05_Ama</td>
+<td>
+<a href="#" onclick="return false;">ショート</a>
+<a href="https://youtu.be/sNdpjHMIj70" target="_blank" rel="noopener noreferrer">動画</a>
+</td>
+<td>ナメクジ (0:56, 1:23, 1:27, 1:40)</td>
+</tr>
 
-    <tr>
-     <td>20251006_09_Bol</td>
-     <td><a href="">ショート</a>
-     <a href="https://youtu.be/T39gZSxiyWg" target="_blank" rel="noopener noreferrer">動画</a></td>
-     <td>ナメクジ (1:20, 2:05)</td>
-    </tr>
-    </tbody>
-   </table>
-  </div>
+</tbody>
+</table>
+</div>
 
+<h2>イグチ目</h2>
 
-  <h2>ベニタケ科</h2>
-  <div class="table-wrapper">
-   <table>
+<div class="table-wrapper">
+<table>
 
-    <thead>
-    <tr>
-     <th>動画ID</th>
-     <th>動画リンク (YouTube)</th>
-     <th>備考 "分類群 (m:ss)"</th>
-    </tr>
-    </thead>
+<thead>
+<tr>
+<th>動画ID</th>
+<th>動画リンク (YouTube)</th>
+<th>備考 "分類群 (m:ss)"</th>
+</tr>
+</thead>
 
-    <tbody>
-    <tr>
-      <td>20251022_01_Rus</td>
-      <td><a href="">ショート</a>
-      <a href="https://youtu.be/UUQNZ82GbFc" target="_blank" rel="noopener noreferrer">動画</a></td>
-      <td>カマドウマ類 (0:08, 0:17, 0:32), ナメクジ (1:01, 1:19他)</td>
-    </tr>
+<tbody>
 
-    <tr>
-     <td>20251022_02_Lac</td>
-     <td><a href="">ショート</a>
-     <a href="https://youtu.be/_GQg9TtJiJc" target="_blank" rel="noopener noreferrer">動画</a></td>
-     <td>ナメクジ (1:53)</td>
-    </tr>
-    </tbody>
+<tr>
+<td>20250916_08_Bol</td>
+<td>
+<a href="#" onclick="return false;">ショート</a>
+<a href="https://youtu.be/7XfmHJOZ2E4" target="_blank" rel="noopener noreferrer">動画</a>
+</td>
+<td>カタツムリ (0:16), バッタ目 (0:36), センチコガネ類 (1:19, 1:53), ゴミムシ類 (1:26)</td>
+</tr>
 
-   </table>
+<tr>
+<td>20251006_09_Bol</td>
+<td>
+<a href="#" onclick="return false;">ショート</a>
+<a href="https://youtu.be/T39gZSxiyWg" target="_blank" rel="noopener noreferrer">動画</a>
+</td>
+<td>ナメクジ (1:20, 2:05)</td>
+</tr>
 
+</tbody>
+</table>
+</div>
 
-  </div>
- </body>
+<h2>ベニタケ科</h2>
+
+<div class="table-wrapper">
+<table>
+
+<thead>
+<tr>
+<th>動画ID</th>
+<th>動画リンク (YouTube)</th>
+<th>備考 "分類群 (m:ss)"</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>20251022_01_Rus</td>
+<td>
+<a href="#" onclick="return false;">ショート</a>
+<a href="https://youtu.be/UUQNZ82GbFc" target="_blank" rel="noopener noreferrer">動画</a>
+</td>
+<td>カマドウマ類 (0:08, 0:17, 0:32), ナメクジ (1:01, 1:19他)</td>
+</tr>
+
+<tr>
+<td>20251022_02_Lac</td>
+<td>
+<a href="#" onclick="return false;">ショート</a>
+<a href="https://youtu.be/_GQg9TtJiJc" target="_blank" rel="noopener noreferrer">動画</a>
+</td>
+<td>ナメクジ (1:53)</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+</div>
+
+</body>
 </html>
-   
-
